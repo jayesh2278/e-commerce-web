@@ -19,11 +19,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from shop import urls as shopurl
 from cart import urls as carturl
+from orders import urls as ordersurl
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include(carturl) ,name='cart'),
     path('', include (shopurl), name='shop'),
+    path('orders/',include (ordersurl), name='orders'),
     ]
 
 
